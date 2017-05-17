@@ -14,7 +14,7 @@ func createGradientLayer(view : UIView) {
     
     gradientLayer = CAGradientLayer()
     
-    gradientLayer.frame = view.bounds
+    gradientLayer.frame = view.bounds
     
     gradientLayer.colors = [UIColor]
 }
