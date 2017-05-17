@@ -9,21 +9,17 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    var categories : [String] = ["Food", "Worklife-Balance", "Sports!", "Going out tonight", "Photography", "#Trending"]
 
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var smileButton: UIButton! {
-        didSet {
-            smileButton.addTarget(self, action: #selector(smileButtonTapped), for: .touchUpInside)
-        }
-    }
-
-    @IBOutlet weak var sadButton: UIButton! {
-        didSet {
-            sadButton.addTarget(self, action: #selector(sadButtonTapped), for: .touchUpInside)
+    @IBOutlet weak var collectionView: UICollectionView!{
+        didSet{
+            collectionView.delegate = self
+            collectionView.dataSource = self
         }
     }
     
-    var answer : Bool = false 
+    var collectionViewLayout: CustomImageFlowLayout!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,15 +27,30 @@ class MainViewController: UIViewController {
         
     }
     
-    func smileButtonTapped () {
-//        let dictionary : [String : Any] = ["" : convertToDictionary()]
-//        
-//        BlogAPI.postABlog(dictionary: dictionary)
-//        navigationController?.popViewController(animated: true)
-    }
-    
-    func sadButtonTapped () {
+    func setupCollectionView() {
+        collectionViewLayout = CustomImageFlowLayout()
+        collectionView.collectionViewLayout = collectionViewLayout
+        collectionView.backgroundColor = .white
         
     }
-
 }
+
+extension MainViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return categories.count
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        
+       cell.categoryLabel.text = categories[indexPath.row]
+        
+        return cell
+        
+    }
+}
+

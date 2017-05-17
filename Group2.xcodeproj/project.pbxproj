@@ -14,6 +14,8 @@
 		3D398E061ECAB5F2002E7BC7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D398E051ECAB5F2002E7BC7 /* LoginViewController.swift */; };
 		3D398E081ECAB7E5002E7BC7 /* ListenToAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D398E071ECAB7E5002E7BC7 /* ListenToAPI.swift */; };
 		3D398E0A1ECACB44002E7BC7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D398E091ECACB44002E7BC7 /* MainViewController.swift */; };
+		524185D91ECC0601005882E0 /* CustomImageFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524185D81ECC0601005882E0 /* CustomImageFlowLayout.swift */; };
+		524185DD1ECC0B8C005882E0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524185DC1ECC0B8C005882E0 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		3D398E051ECAB5F2002E7BC7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3D398E071ECAB7E5002E7BC7 /* ListenToAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListenToAPI.swift; sourceTree = "<group>"; };
 		3D398E091ECACB44002E7BC7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		524185D81ECC0601005882E0 /* CustomImageFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageFlowLayout.swift; sourceTree = "<group>"; };
+		524185DC1ECC0B8C005882E0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 				3D398E021ECAB5A9002E7BC7 /* Helpers */,
 				3D398DEF1ECAB2D1002E7BC7 /* AppDelegate.swift */,
 				3D398DF31ECAB2D1002E7BC7 /* Main.storyboard */,
+				524185DC1ECC0B8C005882E0 /* CollectionViewCell.swift */,
 				3D398DF61ECAB2D1002E7BC7 /* Assets.xcassets */,
 				3D398DF81ECAB2D1002E7BC7 /* LaunchScreen.storyboard */,
 				3D398DFB1ECAB2D1002E7BC7 /* Info.plist */,
@@ -98,6 +103,7 @@
 		3D398E041ECAB5BB002E7BC7 /* Modals */ = {
 			isa = PBXGroup;
 			children = (
+				524185D81ECC0601005882E0 /* CustomImageFlowLayout.swift */,
 			);
 			name = Modals;
 			sourceTree = "<group>";
@@ -177,8 +183,10 @@
 			files = (
 				3D398E061ECAB5F2002E7BC7 /* LoginViewController.swift in Sources */,
 				3D398E081ECAB7E5002E7BC7 /* ListenToAPI.swift in Sources */,
+				524185DD1ECC0B8C005882E0 /* CollectionViewCell.swift in Sources */,
 				3D398DF01ECAB2D1002E7BC7 /* AppDelegate.swift in Sources */,
 				3D398E0A1ECACB44002E7BC7 /* MainViewController.swift in Sources */,
+				524185D91ECC0601005882E0 /* CustomImageFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +313,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZQ547JDPVM;
 				INFOPLIST_FILE = Group2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Group2.Group2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -318,6 +327,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZQ547JDPVM;
 				INFOPLIST_FILE = Group2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Group2.Group2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -344,6 +354,7 @@
 				3D398E001ECAB2D1002E7BC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
